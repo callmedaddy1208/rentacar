@@ -66,6 +66,13 @@ public class CombustibleModel {
         this.nombreCombustible = nombreCombustible;
         this.detalle = detalle;
     }
+
+    @Override
+    public String toString() {
+        return "CombustibleModel{" + "idCombustible=" + idCombustible + ", nombreCombustible=" + nombreCombustible + ", detalle=" + detalle + '}';
+    }
+    
+    
     
     
 }
