@@ -99,9 +99,3 @@ private TipoPersonaRepository tipopersonaRepository;
     
     
 }
-    
-    
-    
-    
-    
-
