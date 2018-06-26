@@ -36,7 +36,7 @@ public class PersonaModel {
     private String direccion2;
     
     @ManyToOne
-    @JoinColumn(name = "")
+    @JoinColumn(name = "id_ciudad")
     
     private CiudadModel ciudad;
     
@@ -46,32 +46,64 @@ public class PersonaModel {
     
     private TipoPersonaModel tipoPersona;
 
+    public int getIdPersona() {
+        return idPersona;
+    }
+
     public void setIdPersona(int idPersona) {
         this.idPersona = idPersona;
+    }
+
+    public String getRut() {
+        return rut;
     }
 
     public void setRut(String rut) {
         this.rut = rut;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
     }
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getTelefono() {
+        return telefono;
     }
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
+    public String getDireccion1() {
+        return direccion1;
+    }
+
     public void setDireccion1(String direccion1) {
         this.direccion1 = direccion1;
+    }
+
+    public String getDireccion2() {
+        return direccion2;
     }
 
     public void setDireccion2(String direccion2) {
@@ -93,6 +125,8 @@ public class PersonaModel {
     public void setTipoPersona(TipoPersonaModel tipoPersona) {
         this.tipoPersona = tipoPersona;
     }
+
+   
 
     public PersonaModel() {
     }
