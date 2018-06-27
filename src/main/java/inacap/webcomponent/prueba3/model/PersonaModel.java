@@ -37,13 +37,11 @@ public class PersonaModel {
     
     @ManyToOne
     @JoinColumn(name = "id_ciudad")
-    
     private CiudadModel ciudad;
     
     
     @ManyToOne
-    @JoinColumn(name = "tipo_persona")
-    
+    @JoinColumn(name = "tipo_persona")  
     private TipoPersonaModel tipoPersona;
 
     public int getIdPersona() {
