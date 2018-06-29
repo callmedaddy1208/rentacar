@@ -95,4 +95,21 @@ public class VehiculoModel {
         this.version = version;
     }
 
+    public VehiculoModel() {
+    }
+
+    
+
+    private VehiculoModel(int idVehiculo, String patente, int valor, int año, String color) {
+        this.idVehiculo = idVehiculo;
+        this.patente = patente;
+        this.valor = valor;
+        this.año = año;
+        this.color = color;
+    }
+
+    
+    
+    
+    
 }
