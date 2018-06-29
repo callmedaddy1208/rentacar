@@ -9,7 +9,6 @@ import inacap.webcomponent.prueba3.model.MarcaModel;
 import inacap.webcomponent.prueba3.repository.MarcaRepository;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

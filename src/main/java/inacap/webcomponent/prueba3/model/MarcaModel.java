@@ -26,6 +26,7 @@ public class MarcaModel {
     private int idMarca;
     private String nombreMarca;
     private String detalle;
+   
     
 
     public int getIdMarca() {

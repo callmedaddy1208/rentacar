@@ -9,7 +9,6 @@ import inacap.webcomponent.prueba3.model.TipoPersonaModel;
 import inacap.webcomponent.prueba3.repository.TipoPersonaRepository;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,6 +24,7 @@ import org.springframework.web.bind.annotation.PutMapping;
  *
  * @author CallMeDaddy
  */
+
 @RestController
 @RequestMapping("/tipo_persona")
 public class TipoPersonaController {

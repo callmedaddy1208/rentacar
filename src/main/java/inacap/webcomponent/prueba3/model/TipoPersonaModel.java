@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -21,12 +23,19 @@ public class TipoPersonaModel {
     
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
- 
- 
  private int idTipoPersona;
  private String nombreTipoPersona;
  private String detalle;
+ 
+ @ManyToOne
+ @JoinColumn(name = "id_persona")
+ private PersonaModel persona;
 
+
+ @ManyToOne
+ @JoinColumn(name = "id_ciudad")
+ private CiudadModel ciudad;
+ 
     public TipoPersonaModel() {
     }
 
