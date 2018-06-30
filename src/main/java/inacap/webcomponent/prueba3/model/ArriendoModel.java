@@ -7,16 +7,38 @@ package inacap.webcomponent.prueba3.model;
 
 import java.sql.Time;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author pablo
  */
+@Entity
+ @Table(name="arriendo")
 public class ArriendoModel {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private int idArriendo;
     private Date fechaArriendo;
     private Time horaArriendo;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_persona")
+    private PersonaModel vendedor;
+    @ManyToOne
+    @JoinColumn(name = "id_")
+    private PersonaModel cliente;
+    
+    private VehiculoModel vehiculo;
+    private MedioPagoModel medioPago;
 
     public ArriendoModel() {
     }
