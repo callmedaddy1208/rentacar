@@ -6,6 +6,7 @@
 package inacap.webcomponent.prueba3.controller;
 
 import inacap.webcomponent.prueba3.model.PersonaModel;
+import inacap.webcomponent.prueba3.model.VehiculoModel;
 import inacap.webcomponent.prueba3.repository.PersonaRepository;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +33,11 @@ public class PersonaController{
         @Autowired
     private PersonaRepository personaRepository;
     
-    
+    @GetMapping()
+    public Iterable<PersonaModel> list() {
+
+        return personaRepository.findAll();
+    }
     
     @GetMapping("/{id}")
     public ResponseEntity<PersonaModel> get(@PathVariable String id){
