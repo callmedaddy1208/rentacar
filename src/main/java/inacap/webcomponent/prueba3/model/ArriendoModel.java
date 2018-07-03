@@ -25,19 +25,24 @@ public class ArriendoModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
-    private int idArriendo;
+        private int idArriendo;
     private Date fechaArriendo;
-    private Time horaArriendo;
+    
     
     @ManyToOne
-    @JoinColumn(name = "id_persona")
+    @JoinColumn(name = "id_vendedor")
     private PersonaModel vendedor;
+    
     @ManyToOne
-    @JoinColumn(name = "id_")
+    @JoinColumn(name = "id_cliente")
     private PersonaModel cliente;
     
+    @ManyToOne
+    @JoinColumn(name = "id_vehiculo")
     private VehiculoModel vehiculo;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_medio_pago")
     private MedioPagoModel medioPago;
 
     public ArriendoModel() {
@@ -45,13 +50,13 @@ public class ArriendoModel {
 
     public ArriendoModel(Date fechaArriendo, Time horaArriendo) {
         this.fechaArriendo = fechaArriendo;
-        this.horaArriendo = horaArriendo;
+       
     }
 
     public ArriendoModel(int idArriendo, Date fechaArriendo, Time horaArriendo) {
         this.idArriendo = idArriendo;
         this.fechaArriendo = fechaArriendo;
-        this.horaArriendo = horaArriendo;
+      
     }
 
     public int getIdArriendo() {
@@ -70,17 +75,8 @@ public class ArriendoModel {
         this.fechaArriendo = fechaArriendo;
     }
 
-    public Time getHoraArriendo() {
-        return horaArriendo;
-    }
+    
+      
+    
 
-    public void setHoraArriendo(Time horaArriendo) {
-        this.horaArriendo = horaArriendo;
-    }
-    
-    
-    
-    
-    
-    
 }
